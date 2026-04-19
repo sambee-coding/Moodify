@@ -36,7 +36,15 @@ function App() {
       } />
       <Route path="/mood" element={<MoodSelector />} />
     </Routes>
+    <footer className='footer'>
+      <p>&copy; {new Date().getFullYear()} Moodify. All rights reserved.</p>
+      <div className='footer-links'>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </footer>
     </>
+   
   )
 }
 

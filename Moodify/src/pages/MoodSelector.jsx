@@ -3,10 +3,10 @@ import './MoodSelector.css';
 
 function MoodSelector() {
   return (
-    <div>
+    <div className="mood-selection">
       <h2>How are you feeling today? 🎧</h2>
 
-      <div>
+      <div className="emotions-btn">
         <button>😊 Happy</button>
         <button>😢 Sad</button>
         <button>😌 Chill</button>
