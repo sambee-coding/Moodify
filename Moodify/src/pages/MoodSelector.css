@@ -1,0 +1,123 @@
+body{
+    background-color: aliceblue;
+    color: black;
+}
+.mood-selection h2{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.emotions-btn{
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin-top: 10%;
+
+}
+.emotions-btn button{
+     padding: 10px 15px;
+     border-radius: 5px;
+     border: 1px solid #c9cff3;
+     background-color: #fff;
+     color: #1f295f;
+     font-weight: bold;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     
+     /* Make them continuously float up and down */
+     animation: float 3s ease-in-out infinite;
+}
+
+/* Pause the floating on hover and lift slightly higher with a shadow */
+.emotions-btn button:hover {
+     transform: translateY(-8px) scale(1.05);
+     box-shadow: 0 8px 20px rgba(31, 41, 95, 0.15);
+     animation-play-state: paused;
+}
+
+/* Offset the animation delays so they don't all float at the exact same time */
+.emotions-btn button:nth-child(1) { animation-delay: 0s; }
+.emotions-btn button:nth-child(2) { animation-delay: 0.3s; }
+.emotions-btn button:nth-child(3) { animation-delay: 0.6s; }
+.emotions-btn button:nth-child(4) { animation-delay: 0.9s; }
+
+/* The actual floating keyframes */
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+.mood-form {
+  margin: 5% auto 0 auto;
+  margin-bottom: 10%;
+  background-color: #dfe3f8;
+  width: 90%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mood-form h3 {
+  text-align: center;
+  color: #1f295f;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #1f295f;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #c9cff3;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-group input[readOnly] {
+  background-color: #e8ebfc;
+  color: #555;
+  cursor: not-allowed;
+}
+
+.submit-btn {
+  background-color: #1f295f;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #2a3780;
+}
+
+.back-btn {
+  background-color: transparent;
+  color: #666;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.back-btn:hover {
+  color: #333;
+}
