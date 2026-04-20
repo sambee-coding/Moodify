@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 import logo from './assets/Moodify..png'
 import MoodSelector from './pages/MoodSelector'
+import Results from './pages/Results'
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
         </>
       } />
       <Route path="/mood" element={<MoodSelector />} />
+      <Route path="/results" element={<Results />} />
     </Routes>
 
     <footer className='footer'>
