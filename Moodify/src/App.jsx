@@ -32,10 +32,26 @@ function App() {
               <button className='btn-home'>Get Started</button> 
             </Link>
           </div>
+          <section className='about-us'>
+            <h2>Discover More</h2>
+            <p>Take a look at some of features.</p>
+            <div className='extra-links-contianer'>
+            <div className='extra-links'>
+            <p>Your Music , Your Mood</p>
+            </div>
+             <div className='extra-links' id='extra-links-down'>
+              <p>Music For Every Mood</p>
+            </div>
+             <div className='extra-links'>
+             <p>Find Your Vibe</p>
+            </div>
+            </div>
+          </section>
         </>
       } />
       <Route path="/mood" element={<MoodSelector />} />
     </Routes>
+
     <footer className='footer'>
       <p>&copy; {new Date().getFullYear()} Moodify. All rights reserved.</p>
       <div className='footer-links'>

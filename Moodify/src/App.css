@@ -106,3 +106,38 @@ nav ul li{
 .footer-links a:hover {
   color: #fff;
 }
+.about-us{
+  margin-bottom: 10%;
+}
+.about-us h2{
+  text-align: center;
+  margin-top: 18%;
+  font-size:  40px;
+  color: #1f295f;
+}
+.about-us p{
+  text-align: center;
+  margin-top: 2%;
+  color: #1f295f;
+
+}
+.extra-links-contianer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+#extra-links-down{
+  margin-top: 16%;
+}
+.extra-links{
+  width: 250px;
+  height: 100px;
+  color: #7986CB;
+  padding: 10px 10px;
+  margin-top: 5%;
+  text-align: center;
+    background-color: #c9cff3;
+    border-radius: 10px;
+   border: 1px solid #1f295f;
+}
