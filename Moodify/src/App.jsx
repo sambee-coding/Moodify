@@ -4,6 +4,8 @@ import './App.css'
 import logo from './assets/Moodify..png'
 import MoodSelector from './pages/MoodSelector'
 import Results from './pages/Results'
+import About from './pages/About'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -15,8 +17,8 @@ function App() {
       <nav>
         <ul>
           <li><Link to="/" style={{color: 'inherit', textDecoration: 'none'}}>HOME</Link></li>
-        <li>ABOUT</li>
-        <li>CONTACT</li>
+          <li><Link to="/about" style={{color: 'inherit', textDecoration: 'none'}}>ABOUT</Link></li>
+          <li><Link to="/contact" style={{color: 'inherit', textDecoration: 'none'}}>CONTACT</Link></li>
         </ul>
       </nav>
     </header>
@@ -52,6 +54,8 @@ function App() {
       } />
       <Route path="/mood" element={<MoodSelector />} />
       <Route path="/results" element={<Results />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
 
     <footer className='footer'>
