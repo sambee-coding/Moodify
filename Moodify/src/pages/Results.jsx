@@ -1,13 +1,14 @@
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import './Results.css';
-
+//link used to navigate betwen pages
+//useLocation used to get the data passed from the MoodSelector form!
 function Results() {
   const location = useLocation();
   // We use location.state to grab the data passed from the MoodSelector form!
-  // If no state exists (e.g., they didn't come from the form), we fall back to default values.
+  
   const { name = 'Music Lover', mood = 'your', genre = 'great' } = location.state || {};
-
+// If no state exists (e.g., they didn't come from the form), we fall back to default values.
   return (
     <div className="results-container">
       <h2>Hey {name}! 🎵</h2>

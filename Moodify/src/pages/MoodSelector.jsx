@@ -54,7 +54,7 @@ function MoodSelector() {
               required 
              />
           </div>
-          <button type="submit" className="submit-btn">Get Playlists</button>
+          <button type="submit" className="submit-btn" disabled ={!name || !genre}>Get Playlists</button>
           
           {/* A way to go back and pick a different mood */}
           <button type="button" className="back-btn" onClick={() => setSelectedMood(null)}>
