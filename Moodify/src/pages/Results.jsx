@@ -1,39 +1,77 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import './Results.css';
-//link used to navigate betwen pages
-//useLocation used to get the data passed from the MoodSelector form!
+
 function Results() {
   const location = useLocation();
-  // We use location.state to grab the data passed from the MoodSelector form!
-  
-  const { name = 'Music Lover', mood = 'your', genre = 'great' } = location.state || {};
-// If no state exists (e.g., they didn't come from the form), we fall back to default values.
+  const { name = 'Music Lover', mood = 'Happy 😊', genre = 'Pop' } = location.state || {};
+
+  const [tracks, setTracks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchPlaylists = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        
+        const response = await fetch(`http://localhost:5000/api/playlists?mood=${encodeURIComponent(mood)}&genre=${encodeURIComponent(genre)}`);
+        const result = await response.json();
+
+        if (!response.ok) {
+          // Now we show the ACTUAL error from the backend (like "Invalid API Key")
+          throw new Error(result.message || 'Failed to fetch recommendations');
+        }
+
+        setTracks(result.data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPlaylists();
+  }, [mood, genre]);
+
   return (
     <div className="results-container">
       <h2>Hey {name}! 🎵</h2>
-      <p>Here are some {genre} playlists perfectly curated for your {mood} mood.</p>
+      <p>Here are some <strong>{genre}</strong> tracks for your <strong>{mood}</strong> mood.</p>
       
-      <div className="playlists-grid">
-        <div className="playlist-card">
-          <div className="playlist-cover">💿</div>
-          <h3>{mood} {genre} Mix</h3>
-          <p>The ultimate vibe.</p>
-          <button>Play Now</button>
+      {loading && <div className="loading-state">Finding the perfect vibes... 🎧</div>}
+      
+      {error && (
+        <div className="error-card">
+          <h3>Oops! Something went wrong</h3>
+          <p>{error}</p>
+          <p className="hint">Tip: Make sure your Spotify keys in .env are correct and the genre is a valid one (like 'pop', 'rock', 'jazz').</p>
         </div>
-        <div className="playlist-card">
-          <div className="playlist-cover">🎧</div>
-          <h3>Daily {genre}</h3>
-          <p>Fresh picks for you.</p>
-          <button>Play Now</button>
+      )}
+
+      {!loading && !error && (
+        <div className="playlists-grid">
+          {tracks.map((track, index) => (
+            <div key={index} className="playlist-card">
+              <div className="playlist-cover">
+                {track.image ? (
+                  <img src={track.image} alt={track.name} style={{ width: '100%', height: '100%', borderRadius: '10px', objectFit: 'cover' }} />
+                ) : (
+                  '🎵'
+                )}
+              </div>
+              <div className="track-info">
+                <h3>{track.name}</h3>
+                <p>{track.artist}</p>
+                <a href={track.url} target="_blank" rel="noopener noreferrer">
+                  <button className="play-btn">Play on Spotify</button>
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="playlist-card">
-          <div className="playlist-cover">📻</div>
-          <h3>Classic Hits</h3>
-          <p>Throwback tunes.</p>
-          <button>Play Now</button>
-        </div>
-      </div>
+      )}
 
       <Link to="/mood">
         <button className="back-to-mood-btn">Pick another mood</button>
