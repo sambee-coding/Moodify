@@ -65,7 +65,7 @@ function Results() {
                 <h3>{track.name}</h3>
                 <p>{track.artist}</p>
                 <a href={track.url} target="_blank" rel="noopener noreferrer">
-                  <button className="play-btn">Play on Spotify</button>
+                  <button className="play-btn">Play on Apple Music</button>
                 </a>
               </div>
             </div>

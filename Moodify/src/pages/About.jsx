@@ -11,10 +11,10 @@ function About() {
 
       <section className="about-content">
         <div className="about-card">
-          <h2>Our Mission</h2>
+          <h2>My Mission</h2>
           <p>
-            At Moodify, we believe that music is the ultimate language of the soul. 
-            Our mission is to help you find the perfect soundtrack for every moment of your life, 
+            At Moodify, I believe that music is the ultimate language of the soul. 
+            My mission is to help you find the perfect soundtrack for every moment of your life, 
             whether you're feeling on top of the world or needing a gentle comfort.
           </p>
         </div>
@@ -22,8 +22,8 @@ function About() {
         <div className="about-card">
           <h2>How It Works</h2>
           <p>
-            We use a smart engine to analyze your current mood and favorite genre. 
-            By connecting to real-time music databases, we curate a list of tracks 
+            I use a smart engine to analyze your current mood and favorite genre. 
+            By connecting to real-time music databases, I curate a list of tracks 
             that match the energy, valence, and "vibe" you're looking for.
           </p>
         </div>

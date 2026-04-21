@@ -13,7 +13,7 @@ function Contact() {
     <div className="contact-container">
       <div className="contact-info">
         <h1>Get in Touch</h1>
-        <p>Have suggestions or feedback? We'd love to hear from you!</p>
+        <p>Have suggestions or feedback? I'd love to hear from you!</p>
         
         <div className="info-item">
           <span>📧</span>

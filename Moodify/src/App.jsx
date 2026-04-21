@@ -37,17 +37,23 @@ function App() {
           </div>
           <section className='about-us'>
             <h2>Discover More</h2>
-            <p>Take a look at some of features.</p>
+            <p>Experience the features that make Moodify your perfect music companion.</p>
             <div className='extra-links-contianer'>
-            <div className='extra-links'>
-            <p>Your Music , Your Mood</p>
-            </div>
-             <div className='extra-links' id='extra-links-down'>
-              <p>Music For Every Mood</p>
-            </div>
-             <div className='extra-links'>
-             <p>Find Your Vibe</p>
-            </div>
+              <div className='extra-links'>
+                <div className='icon'>🎧</div>
+                <h3>Personalized Mix</h3>
+                <p>Curated tracks that match your exact vibe and genre.</p>
+              </div>
+              <div className='extra-links' id='extra-links-down'>
+                <div className='icon'>✨</div>
+                <h3>Free Forever</h3>
+                <p>Listen to your favorite artists without any subscription costs.</p>
+              </div>
+              <div className='extra-links'>
+                <div className='icon'>🔥</div>
+                <h3>Find Your Vibe</h3>
+                <p>Explore music from thousands of artists worldwide.</p>
+              </div>
             </div>
           </section>
         </>
