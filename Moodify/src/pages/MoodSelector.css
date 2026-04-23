@@ -4,7 +4,7 @@ body{
 }
 .mood-selection h2{
     text-align: center;
-    margin-top: 10%;
+    margin-top: 4%;
 }
 
 .emotions-btn{
@@ -48,10 +48,10 @@ margin-top: 10%;
   100% { transform: translateY(0px); }
 }
 .mood-form {
-  margin: 5% auto 0 auto;
-  margin-bottom: 10%;
-  background-color: #dfe3f8;
-  width: 90%;
+  margin: 2% auto 0 auto;
+  margin-bottom: 15%;
+  background-color: hsl(230, 64%, 92%);
+  width: 60%;
   max-width: 400px;
   padding: 30px;
   border-radius: 12px;
