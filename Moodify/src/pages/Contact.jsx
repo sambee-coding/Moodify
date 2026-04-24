@@ -17,7 +17,7 @@ function Contact() {
         
         <div className="info-item">
           <span>📧</span>
-          <p>support@moodify.com</p>
+          <p>samrisamrawit30@gmail.com</p>
         </div>
         <div className="info-item">
           <span>📍</span>
