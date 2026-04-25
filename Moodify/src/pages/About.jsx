@@ -13,7 +13,7 @@ function About() {
         <div className="about-card">
           <h2>My Mission</h2>
           <p>
-            At Moodify, I believe that music is the ultimate language of the soul. 
+            At Moodify, I believe that music is the way that can express feelings and emotions. 
             My mission is to help you find the perfect soundtrack for every moment of your life, 
             whether you're feeling on top of the world or needing a gentle comfort.
           </p>
