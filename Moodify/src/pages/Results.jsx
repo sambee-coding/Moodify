@@ -16,7 +16,7 @@ function Results() {
         setLoading(true);
         setError(null);
         
-        const response = await fetch(`http://localhost:5000/api/playlists?mood=${encodeURIComponent(mood)}&genre=${encodeURIComponent(genre)}`);
+        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/playlists?mood=${encodeURIComponent(mood)}&genre=${encodeURIComponent(genre)}`);
         const result = await response.json();
 
         if (!response.ok) {
